@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event Listener</title>
+</head>
+<body>
+    <h1>Add Event Listener</h1>
+    <button id="first">Click Me-0</button>
+    <button id="second">click Me-1</button>
+    <button id="third">click Me-2</button>
+    <button id="last">click Me-3</button>
+
+    <script>
+        document.getElementById('first').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'hotpink';
+        })
+        document.getElementById('last').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'cyan';
+        })
+        document.getElementById('third').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'indianred';
+        })
+        function addEvent() {
+            document.body.style.backgroundColor = 'tomato';
+        }
+        let secondButton = document.getElementById('second');
+        secondButton.addEventListener('click', addEvent);
+    </script>
+</body>
+</html>
